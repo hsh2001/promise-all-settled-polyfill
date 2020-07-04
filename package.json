@@ -4,7 +4,11 @@
   "description": "Polyfill for Promise.allSettled",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint index.ts",
+    "prettier": "prettier . --write",
+    "dev": "npm run build -- --watch",
+    "build": "node_modules/typescript/bin/tsc index.ts --declaration"
   },
   "repository": {
     "type": "git",
@@ -18,5 +22,21 @@
   "bugs": {
     "url": "https://github.com/hsh2001/promise-all-settled-polyfill/issues"
   },
-  "homepage": "https://github.com/hsh2001/promise-all-settled-polyfill#readme"
+  "homepage": "https://github.com/hsh2001/promise-all-settled-polyfill#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.3",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "eslint": "^7.4.0",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "typescript": "^3.9.6"
+  }
 }
