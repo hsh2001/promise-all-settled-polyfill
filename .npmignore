@@ -1,0 +1,9 @@
+node_modules/**
+.github/**
+__test__/**
+
+.eslintrc
+.prettierrc
+index.ts
+jest.config.js
+tsconfig.json
