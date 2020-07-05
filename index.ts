@@ -2,7 +2,7 @@ interface PomiseAllSettledResult<T> {
   status: 'fulfilled' | 'rejected';
   value?: T;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  reason?: Error | any;
+  reason?: Error |        any;
 }
 
 function promiseAllSettled<T>(
