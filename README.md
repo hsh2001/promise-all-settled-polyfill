@@ -1,4 +1,4 @@
-# promise-all-settled-polyfill
+# Promise.allSettled polyfill
 
 ## install
 ```
