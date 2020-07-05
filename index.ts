@@ -5,13 +5,6 @@ interface PomiseAllSettledResult<T> {
   reason?: Error | any;
 }
 
-function promiseAllSettled<T>(
-  promises: Promise<T>[],
-): Promise<PomiseAllSettledResult<T>[]> {
-  return Promise.all(
-    promises.map((promise) => {
-      return Promise.resolve()
-        .then(() => promise)
         .then(
           (value): PomiseAllSettledResult<T> => ({
             value,
